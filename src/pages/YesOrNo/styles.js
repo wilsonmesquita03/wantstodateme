@@ -6,6 +6,7 @@ const YesOrNoContainer = styled.div`
 
     gap: 3rem;
 
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
