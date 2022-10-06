@@ -7,7 +7,7 @@ import MuteButton from "../../components/MuteButton"
 
 
 const Yes = () => {
-    const [mute, setMute] = useState(false)
+    const [mute, setMute] = useState(true)
 
     const functionMute = (e) => {
         e.preventDefault()
@@ -36,7 +36,6 @@ const Yes = () => {
                 style={{ fontSize: '1.5em' }}
                 />
             </Confetti>
-            <iframe title="audio" src={music} allow="autoplay" id="audio" style={{display: "none"}}></iframe>
             <audio id="player" autoPlay loop>
                 <source src={music} type="audio/mp3"/>
             </audio>
