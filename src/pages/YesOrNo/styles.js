@@ -4,6 +4,8 @@ const YesOrNoContainer = styled.div`
     min-height: 100vh;
     min-width: 100vw;
 
+    gap: 3rem;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
