@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-const Button = styled.button`
+const ButtonMain = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,5 +32,37 @@ const Button = styled.button`
     height: 50px;
 `
 
+const ContainerButtonMove = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-export { Button }
+    width: 300px;
+    height: 150px;
+
+    ${({children}) => {if(children === "Não") return css`z-index: 2;`}}
+
+    ${(props) => {
+        if(props.move){
+            return css`
+                position: static;
+                
+            ` 
+        }else{
+            return css`
+                position: absolute;
+            `
+        }
+        
+    }}
+
+    ${(props) => {
+        return css`
+            top: ${props.top}px;
+            left: ${props.left}px; 
+        `
+    }}
+`
+
+
+export { ButtonMain, ContainerButtonMove }
