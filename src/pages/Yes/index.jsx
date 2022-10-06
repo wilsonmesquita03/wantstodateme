@@ -1,6 +1,13 @@
+import Confetti from "../../components/Confetti"
+import { YesContainer } from "./styles"
+
 const Yes = () => {
     return (
-        <h1>Yes</h1>
+        <YesContainer>
+            <Confetti>
+                Chama no zap bb
+            </Confetti>
+        </YesContainer>
     )
 }
 

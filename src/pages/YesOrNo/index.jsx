@@ -1,14 +1,20 @@
 import ButtonUnclickable from "../../components/ButtonUnclickable"
 import { Button } from "../../components/Button/styles";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import { YesOrNoContainer, DivFlex } from "./styles";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const YesOrNo = () => {
+    const navigate = useNavigate()
+
     const [finished, setFinished] = useState(false)
 
     const { name } = useParams()
+
+    const redirectToYesPage = () => {
+        navigate("/yes")
+    }
 
     return (
         <YesOrNoContainer>
@@ -29,7 +35,7 @@ const YesOrNo = () => {
             {finished ? 
                 <DivFlex>
                     <ButtonUnclickable />
-                    <Button>Sim</Button>
+                    <Button onClick={() => redirectToYesPage()}>Sim</Button>
                 </DivFlex>
                 :
                 <></>
