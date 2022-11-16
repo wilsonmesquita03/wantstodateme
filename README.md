@@ -1,1 +1,1 @@
-USE `(https://wantstodateme.vercel.app/:name`
+USE `https://wantstodateme.vercel.app/:name`
